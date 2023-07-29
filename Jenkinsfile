@@ -30,8 +30,8 @@ pipeline {
 		stage("Push to Registry") {
 			steps{
 				script {
-					sh 'docker tag okusad1/timeserver docker.io/okusad1server:$BUILD_ID'
-					sh 'docker push docker.io/okusad1server:$BUILD_ID'
+					sh 'docker tag okusad1/timeserver docker.io/okusad1/okusad1server:$BUILD_ID'
+					sh 'docker push docker.io/okusad1/okusad1server:$BUILD_ID'
 				}
 			}
 		}
